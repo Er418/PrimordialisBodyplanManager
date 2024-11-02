@@ -1,4 +1,4 @@
-#include "../includes/SteamManager.hpp"
+#include "../source/includes/SteamManager.hpp"
 
 int main() {
     SteamManager steam;

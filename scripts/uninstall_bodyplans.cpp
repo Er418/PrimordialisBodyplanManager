@@ -1,7 +1,7 @@
-#include "../includes/common.hpp"
-#include "../includes/SteamManager.hpp"
-#include "../includes/LocalConfigManager.hpp"
-#include "../includes/GlobalConfigManager.hpp"
+#include "../source/includes/common.hpp"
+#include "../source/includes/SteamManager.hpp"
+#include "../source/includes/LocalConfigManager.hpp"
+#include "../source/includes/GlobalConfigManager.hpp"
 
 const std::vector<std::string> files = {
         "antenna_bug.bod",
@@ -35,13 +35,12 @@ int main() {
     local_config.Read(current_path / "config.json");
     SteamManager gamedir_manager(local_config);
     gamedir_manager.FindGameDir();
-    gamedir_manager.CreateBackup(files);
-    gamedir_manager.MoveFilesToBodyplans(current_path / "body plans", files);
+    gamedir_manager.RestoreBackup(files);
 
     local_config.Write(current_path / "config.json");
     gamedir_manager.SaveGlobalConfig();
 
-    std::cout << "\n\nSuccessfully installed " << local_config.GetBodypackName() << std::endl;
+    std::cout << "\n\nBodypack successfully uninstalled" << std::endl;
 
     system("pause");
     return 0;
