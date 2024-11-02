@@ -1,11 +1,8 @@
-#include "../source/includes/SteamManager.hpp"
+#include "../manager/source/SteamManager.hpp"
 
 int main() {
-    SteamManager steam;
+    LocalConfigManager local_config;
+    SteamManager steam(local_config);
     auto result = steam.FindGameDir();
-    if (!result.has_value()) {
-        std::cout << "oops";
-    } else {
-        std::cout << result.value();
-    }
+    std::cout << result;
 }

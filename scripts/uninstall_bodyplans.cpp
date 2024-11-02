@@ -1,7 +1,7 @@
-#include "../source/includes/common.hpp"
-#include "../source/includes/SteamManager.hpp"
-#include "../source/includes/LocalConfigManager.hpp"
-#include "../source/includes/GlobalConfigManager.hpp"
+#include "../manager/source/SteamManager.hpp"
+#include "../manager/source/GlobalConfigManager.hpp"
+#include "../manager/source/LocalConfigManager.hpp"
+#include "../manager/source/FileManager.hpp"
 
 const std::vector<std::string> files = {
         "antenna_bug.bod",

@@ -1,6 +1,6 @@
 #include "SteamManager.hpp"
 #include <windows.h>
-#include "../../third_party/vdf_parser.hpp"
+#include "../third_party/vdf_parser.hpp"
 
 std::optional<std::string> SteamManager::GetSteamLocation() {
     HKEY hKey;
