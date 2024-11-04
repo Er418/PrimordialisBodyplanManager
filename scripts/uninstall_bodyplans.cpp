@@ -10,6 +10,7 @@ const std::vector<std::string> files = {
         "boss_centipede.bod",
         "boss_donut.bod",
         "boss_missile.bod",
+        "chariot.bod",
         "explosive_star.bod",
         "fire_chomper.bod",
         "fish.bod",
